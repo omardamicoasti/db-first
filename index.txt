@@ -1,0 +1,22 @@
+CARS
+
+id_annuncio			numero		AUTO_INCREMENT	NOT NULL	PRIMARY KEY UNIQUE
+condizione			stringa		varchar(20)	NOT NULL
+prezzo				numero		MEDIUMINT	NOT NULL
+immagine			stringa		text		Default("concessionario_logo.png")
+marca				stringa		varchar(20)	NOT NULL
+modello				stringa		varchar(50)	NOT NULL	
+generazione			stringa		varchar(20)	NULL
+colore				stringa		varchar(20)	
+anno_immatricolazione		data		YEAR		NULL (if condizione == "nuovo")
+km				numero		DATE		NULL (if condizione == "nuovo")
+alimentazione			stringa		varchar(20)
+cilindrata			numero		MEDIUMINT	NULL (if alimentazione == "elettrico")
+potenza				numero		SMALLINT
+trazione			stringa		varchar(10)	
+cambio				stringa		varchar(20)	
+marce				numero		TINYINT		NULL (if cambio == "automatico")
+porte				numero		TINYINT	
+posti				numero		TINYINT		NULL		
+descrizione_optional		stringa		MEDIUMTEXT	NULL	
+
